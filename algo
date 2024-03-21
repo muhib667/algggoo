@@ -1,0 +1,29 @@
+# Initialize counters
+sentence_length = 0
+word_count = 0
+vowel_count = 0
+
+# Input sentence
+sentence = input("Enter a sentence: ")
+
+# Iterate through each character in the sentence
+for char in sentence:
+    # Increment sentence length counter for every character (excluding spaces)
+    if char != ' ':
+        sentence_length += 1
+
+    # Check if the character is a vowel (assuming English vowels)
+    if char.lower() in 'aeiou':
+        vowel_count += 1
+
+    # Check if the character is a space to determine word count
+    if char == ' ':
+        word_count += 1
+
+# Add 1 to word count to account for the last word
+word_count += 1
+
+# Output the results
+print("Length of the sentence:", sentence_length)
+print("Number of words in the sentence:", word_count)
+print("Number of vowels in the sentence:", vowel_count)
